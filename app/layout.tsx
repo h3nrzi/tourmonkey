@@ -4,6 +4,7 @@ import { ThemeProvider } from '@mui/material/styles';
 
 import theme from '@/app/theme';
 import './globals.css';
+import SearchAppBar from './components/SearchAppBar';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,7 +16,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" dir="rtl">
       <AppRouterCacheProvider>
         <ThemeProvider theme={theme}>
-          <body>{children}</body>
+          <body>
+            <nav>
+              <SearchAppBar />
+            </nav>
+            <main>{children}</main>
+          </body>
         </ThemeProvider>
       </AppRouterCacheProvider>
     </html>
