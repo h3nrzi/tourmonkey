@@ -1,7 +1,19 @@
-import { Button } from '@mui/material';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+
+import TourCard from './components/TourCard';
 
 const HomePage = () => {
-  return <Button variant="contained">button</Button>;
+  return (
+    <Container>
+      <Grid container spacing={5}>
+        <TourCard />
+        <TourCard />
+        <TourCard />
+        <TourCard />
+      </Grid>
+    </Container>
+  );
 };
 
 export default HomePage;
