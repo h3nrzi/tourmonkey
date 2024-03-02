@@ -1,16 +1,13 @@
 'use client';
-import { Roboto } from 'next/font/google';
+import localFont from 'next/font/local';
 import { createTheme } from '@mui/material/styles';
 
-const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap'
-});
+const iransans = localFont({ src: '../../public/iranSans.ttf', display: 'swap' });
 
 const theme = createTheme({
+  direction: 'rtl',
   typography: {
-    fontFamily: roboto.style.fontFamily
+    fontFamily: iransans.style.fontFamily
   }
 });
 
